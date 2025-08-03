@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Attendance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Student Attendance Form</h1>
+    <form id="attendance-form">
+      <h2>Course Info</h2>
+      <label>Teacher Name: <input type="text" id="teacherName" required /></label>
+      <label>Course Title: <input type="text" id="courseTitle" required /></label>
+      <label>Course Code: <input type="text" id="courseCode" required /></label>
+      <label>Date: <input type="number" id="date" min="1" max="31" required /></label>
+      <label>Month: <input type="text" id="month" required /></label>
+      <label>Year: <input type="number" id="year" min="2000" required /></label>
+      <label>Day: <input type="text" id="day" required /></label>
+
+      <h2>Student Info</h2>
+      <label>Student Name: <input type="text" id="studentName" required /></label>
+      <label>Roll No: <input type="text" id="rollNo" required /></label>
+      <label>Father Name: <input type="text" id="fatherName" required /></label>
+
+      <label>Attendance:
+        <select id="attendanceStatus">
+          <option value="Present">Present</option>
+          <option value="Absent">Absent</option>
+        </select>
+      </label>
+
+      <button type="submit">Save Attendance</button>
+    </form>
+
+    <h2>Attendance Records</h2>
+    <table id="recordsTable">
+      <thead>
+        <tr>
+          <th>Student</th>
+          <th>Roll No</th>
+          <th>Father</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th>Course</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
